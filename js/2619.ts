@@ -1,0 +1,19 @@
+interface Array<T> {
+    last(): T | -1;
+}
+
+Array.prototype.last = function() {
+    if (this.length > 0) {
+        return this.at(this.length - 1);
+    } 
+
+    return -1;
+};
+
+/**
+ * const arr = [1, 2, 3];
+ * ; // 3
+ */
+
+const arr = [1, 2, 3];
+console.log(arr.last())
